@@ -1,0 +1,69 @@
+Chets-MacBook-Pro:BazelProblem chetgnegy$ blaze run -s MinimalExample:MyLibBrokenTest
+INFO: Analyzed target //MinimalExample:MyLibBrokenTest (23 packages loaded, 418 targets configured).
+INFO: Found 1 target...
+SUBCOMMAND: # //MinimalExample:MyLib [action 'Compiling MinimalExample/MyLib.cpp', configuration: df1be34ef9742c8a8fbf877248919bd886d53a7454913b50c6d6349e4be2a8b5, execution platform: @local_config_platform//:host]
+(cd /private/var/tmp/_bazel_chetgnegy/e2774f6b28d225deb5f320edd2f1bcb1/execroot/__main__ && \
+  exec env - \
+    APPLE_SDK_PLATFORM=MacOSX \
+    APPLE_SDK_VERSION_OVERRIDE=10.15 \
+    PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/chetgnegy/Neptune/Source:/Users/chetgnegy/.rvm/bin \
+    XCODE_VERSION_OVERRIDE=11.6.0.11E708 \
+  external/local_config_cc/wrapped_clang '-D_FORTIFY_SOURCE=1' -fstack-protector -fcolor-diagnostics -Wall -Wthread-safety -Wself-assign -fno-omit-frame-pointer -O0 -DDEBUG '-std=c++11' -iquote . -iquote bazel-out/darwin-fastbuild/bin -iquote bazel-out/apl-darwin_x86_64-fastbuild/bin -MD -MF bazel-out/darwin-fastbuild/bin/MinimalExample/_objs/MyLib/MyLib.d '-frandom-seed=bazel-out/darwin-fastbuild/bin/MinimalExample/_objs/MyLib/MyLib.o' -isysroot __BAZEL_XCODE_SDKROOT__ -F__BAZEL_XCODE_SDKROOT__/System/Library/Frameworks -F__BAZEL_XCODE_DEVELOPER_DIR__/Platforms/MacOSX.platform/Developer/Library/Frameworks '-mmacosx-version-min=10.15' -no-canonical-prefixes -Wno-builtin-macro-redefined '-D__DATE__="redacted"' '-D__TIMESTAMP__="redacted"' '-D__TIME__="redacted"' -c MinimalExample/MyLib.cpp -o bazel-out/darwin-fastbuild/bin/MinimalExample/_objs/MyLib/MyLib.o)
+SUBCOMMAND: # //MinimalExample:ComplicatedLibInternalObjC [action 'Compiling MinimalExample/ComplicatedLib.mm', configuration: e00315f4608662cd39dfa498f714a535dca6a0152986056deab77e9fc1fc2511, execution platform: @local_config_platform//:host]
+(cd /private/var/tmp/_bazel_chetgnegy/e2774f6b28d225deb5f320edd2f1bcb1/execroot/__main__ && \
+  exec env - \
+    APPLE_SDK_PLATFORM=MacOSX \
+    APPLE_SDK_VERSION_OVERRIDE=10.15 \
+    PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/chetgnegy/Neptune/Source:/Users/chetgnegy/.rvm/bin \
+    XCODE_VERSION_OVERRIDE=11.6.0.11E708 \
+  external/local_config_cc/wrapped_clang -arch x86_64 '-stdlib=libc++' '-std=gnu++11' '-D_FORTIFY_SOURCE=1' -fstack-protector -fcolor-diagnostics -Wall -Wthread-safety -Wself-assign -fno-omit-frame-pointer -O0 -DDEBUG -Wshorten-64-to-32 -Wbool-conversion -Wconstant-conversion -Wduplicate-method-match -Wempty-body -Wenum-conversion -Wint-conversion -Wunreachable-code -Wmismatched-return-types -Wundeclared-selector -Wuninitialized -Wunused-function -Wunused-variable -iquote . -iquote bazel-out/apl-darwin_x86_64-fastbuild/bin -MD -MF bazel-out/apl-darwin_x86_64-fastbuild/bin/MinimalExample/_objs/ComplicatedLibInternalObjC/non_arc/ComplicatedLib.d -DOS_MACOSX -fno-autolink -isysroot __BAZEL_XCODE_SDKROOT__ -F__BAZEL_XCODE_SDKROOT__/System/Library/Frameworks -F__BAZEL_XCODE_DEVELOPER_DIR__/Platforms/MacOSX.platform/Developer/Library/Frameworks -fno-objc-arc '-mmacosx-version-min=10.15' -O0 '-DDEBUG=1' -c MinimalExample/ComplicatedLib.mm -o bazel-out/apl-darwin_x86_64-fastbuild/bin/MinimalExample/_objs/ComplicatedLibInternalObjC/non_arc/ComplicatedLib.o)
+SUBCOMMAND: # //MinimalExample:MyLibBrokenTest [action 'Compiling MinimalExample/MyLibWorkingBinary.cpp', configuration: df1be34ef9742c8a8fbf877248919bd886d53a7454913b50c6d6349e4be2a8b5, execution platform: @local_config_platform//:host]
+(cd /private/var/tmp/_bazel_chetgnegy/e2774f6b28d225deb5f320edd2f1bcb1/execroot/__main__ && \
+  exec env - \
+    APPLE_SDK_PLATFORM=MacOSX \
+    APPLE_SDK_VERSION_OVERRIDE=10.15 \
+    PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/chetgnegy/Neptune/Source:/Users/chetgnegy/.rvm/bin \
+    XCODE_VERSION_OVERRIDE=11.6.0.11E708 \
+  external/local_config_cc/wrapped_clang '-D_FORTIFY_SOURCE=1' -fstack-protector -fcolor-diagnostics -Wall -Wthread-safety -Wself-assign -fno-omit-frame-pointer -O0 -DDEBUG '-std=c++11' -iquote . -iquote bazel-out/darwin-fastbuild/bin -iquote bazel-out/apl-darwin_x86_64-fastbuild/bin -iquote external/bazel_tools -iquote bazel-out/darwin-fastbuild/bin/external/bazel_tools -MD -MF bazel-out/darwin-fastbuild/bin/MinimalExample/_objs/MyLibBrokenTest/MyLibWorkingBinary.d '-frandom-seed=bazel-out/darwin-fastbuild/bin/MinimalExample/_objs/MyLibBrokenTest/MyLibWorkingBinary.o' -isysroot __BAZEL_XCODE_SDKROOT__ -F__BAZEL_XCODE_SDKROOT__/System/Library/Frameworks -F__BAZEL_XCODE_DEVELOPER_DIR__/Platforms/MacOSX.platform/Developer/Library/Frameworks '-mmacosx-version-min=10.15' -no-canonical-prefixes -Wno-builtin-macro-redefined '-D__DATE__="redacted"' '-D__TIMESTAMP__="redacted"' '-D__TIME__="redacted"' -c MinimalExample/MyLibWorkingBinary.cpp -o bazel-out/darwin-fastbuild/bin/MinimalExample/_objs/MyLibBrokenTest/MyLibWorkingBinary.o)
+SUBCOMMAND: # //MinimalExample:MyLib [action 'Linking MinimalExample/libMyLib.so', configuration: df1be34ef9742c8a8fbf877248919bd886d53a7454913b50c6d6349e4be2a8b5, execution platform: @local_config_platform//:host]
+(cd /private/var/tmp/_bazel_chetgnegy/e2774f6b28d225deb5f320edd2f1bcb1/execroot/__main__ && \
+  exec env - \
+    APPLE_SDK_PLATFORM=MacOSX \
+    APPLE_SDK_VERSION_OVERRIDE=10.15 \
+    PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/chetgnegy/Neptune/Source:/Users/chetgnegy/.rvm/bin \
+    XCODE_VERSION_OVERRIDE=11.6.0.11E708 \
+  external/local_config_cc/cc_wrapper.sh -lc++ -fobjc-link-runtime -Wl,-S -shared -o bazel-out/darwin-fastbuild/bin/MinimalExample/libMyLib.so bazel-out/darwin-fastbuild/bin/MinimalExample/_objs/MyLib/MyLib.o -headerpad_max_install_names -no-canonical-prefixes -undefined dynamic_lookup '-mmacosx-version-min=10.15')
+SUBCOMMAND: # //MinimalExample:ComplicatedLibInternalObjC [action 'Linking MinimalExample/libComplicatedLibInternalObjC.a', configuration: e00315f4608662cd39dfa498f714a535dca6a0152986056deab77e9fc1fc2511, execution platform: @local_config_platform//:host]
+(cd /private/var/tmp/_bazel_chetgnegy/e2774f6b28d225deb5f320edd2f1bcb1/execroot/__main__ && \
+  exec env - \
+    APPLE_SDK_PLATFORM=MacOSX \
+    APPLE_SDK_VERSION_OVERRIDE=10.15 \
+    PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/chetgnegy/Neptune/Source:/Users/chetgnegy/.rvm/bin \
+    XCODE_VERSION_OVERRIDE=11.6.0.11E708 \
+  external/local_config_cc/libtool -no_warning_for_no_symbols -static -filelist bazel-out/apl-darwin_x86_64-fastbuild/bin/MinimalExample/ComplicatedLibInternalObjC-archive.objlist -arch_only x86_64 -syslibroot __BAZEL_XCODE_SDKROOT__ -o bazel-out/apl-darwin_x86_64-fastbuild/bin/MinimalExample/libComplicatedLibInternalObjC.a)
+SUBCOMMAND: # //MinimalExample:MyLibBrokenTest [action 'Linking MinimalExample/MyLibBrokenTest', configuration: df1be34ef9742c8a8fbf877248919bd886d53a7454913b50c6d6349e4be2a8b5, execution platform: @local_config_platform//:host]
+(cd /private/var/tmp/_bazel_chetgnegy/e2774f6b28d225deb5f320edd2f1bcb1/execroot/__main__ && \
+  exec env - \
+    APPLE_SDK_PLATFORM=MacOSX \
+    APPLE_SDK_VERSION_OVERRIDE=10.15 \
+    PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/chetgnegy/Neptune/Source:/Users/chetgnegy/.rvm/bin \
+    XCODE_VERSION_OVERRIDE=11.6.0.11E708 \
+  external/local_config_cc/cc_wrapper.sh -lc++ -fobjc-link-runtime -Wl,-S -o bazel-out/darwin-fastbuild/bin/MinimalExample/MyLibBrokenTest -Wl,-rpath,@loader_path/../_solib_darwin_x86_64/ -Lbazel-out/darwin-fastbuild/bin/_solib_darwin_x86_64 bazel-out/darwin-fastbuild/bin/MinimalExample/_objs/MyLibBrokenTest/MyLibWorkingBinary.o -lMinimalExample_SlibMyLib bazel-out/apl-darwin_x86_64-fastbuild/bin/MinimalExample/libComplicatedLibInternalObjC.a -headerpad_max_install_names -no-canonical-prefixes -undefined dynamic_lookup '-mmacosx-version-min=10.15')
+Target //MinimalExample:MyLibBrokenTest up-to-date:
+  bazel-bin/MinimalExample/MyLibBrokenTest
+INFO: Elapsed time: 1.662s, Critical Path: 0.31s
+INFO: 6 processes: 6 darwin-sandbox.
+INFO: Build completed successfully, 11 total actions
+INFO: Build completed successfully, 11 total actions
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //MinimalExample:MyLibBrokenTest
+-----------------------------------------------------------------------------
+dyld: lazy symbol binding failed: Symbol not found: __ZN14ComplicatedLibC1Ev
+  Referenced from: /private/var/tmp/_bazel_chetgnegy/e2774f6b28d225deb5f320edd2f1bcb1/execroot/__main__/bazel-out/darwin-fastbuild/bin/MinimalExample/MyLibBrokenTest.runfiles/__main__/MinimalExample/../_solib_darwin_x86_64//libMinimalExample_SlibMyLib.so
+  Expected in: flat namespace
+
+dyld: Symbol not found: __ZN14ComplicatedLibC1Ev
+  Referenced from: /private/var/tmp/_bazel_chetgnegy/e2774f6b28d225deb5f320edd2f1bcb1/execroot/__main__/bazel-out/darwin-fastbuild/bin/MinimalExample/MyLibBrokenTest.runfiles/__main__/MinimalExample/../_solib_darwin_x86_64//libMinimalExample_SlibMyLib.so
+  Expected in: flat namespace
+
+Chets-MacBook-Pro:BazelProblem chetgnegy$

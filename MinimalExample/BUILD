@@ -14,6 +14,8 @@ cc_library(
     deps = [
         TARGET_UNDER_TEST,
     ],
+    # THIS FIXES THE PROBLEM:
+    # linkstatic = 1,
 )
 
 cc_test(
