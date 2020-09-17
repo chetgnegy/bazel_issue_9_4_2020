@@ -18,10 +18,9 @@ cc_library(
 
 cc_test(
     name = "MyLibBrokenTest",
-    srcs = ["MyLibBrokenTest.cpp"],
+    srcs = ["MyLibWorkingBinary.cpp"],
     deps = [
         "//MinimalExample:MyLib",
-        "@gtest//:gtest_main",
     ],
 )
 
@@ -38,7 +37,6 @@ cc_test(
     srcs = ["MyLibWorkingTest.cpp"],
     deps = [
         TARGET_UNDER_TEST,
-        "@gtest//:gtest_main",
     ],
 )
 

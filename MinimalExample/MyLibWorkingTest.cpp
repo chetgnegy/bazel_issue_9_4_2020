@@ -1,8 +1,8 @@
 #include "MinimalExample/ComplicatedLib.h"
 
-#include "gtest/gtest.h"
+#include <cstdio>
 
-TEST(MyLibTest, CleverTestName) {
+int main() {
   ComplicatedLib lib;
   printf("%d\n", lib.GetAnswer());
 }
