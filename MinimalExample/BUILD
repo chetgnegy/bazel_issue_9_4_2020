@@ -30,7 +30,6 @@ cc_binary(
     srcs = ["MyLibWorkingBinary.cpp"],
     deps = [
         "//MinimalExample:MyLib",
-        "@gtest//:gtest_main",
     ],
 )
 
@@ -72,7 +71,6 @@ cc_library (
         ":ComplicatedLibTextualHdrs",
         ":ComplicatedLibInternalObjC",
     ],
-    alwayslink = 1,  # Shouldn't need this either way.
 )
 
 filegroup(
@@ -83,5 +81,4 @@ objc_library (
     name = "ComplicatedLibInternalObjC",
     non_arc_srcs = [":ComplicatedLibObjCFiles"],
     deps = [":ComplicatedLibTextualHdrs"],
-    alwayslink = 1,  # Shouldn't need this either way.
 )
